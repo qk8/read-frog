@@ -1,5 +1,11 @@
 # @read-frog/extension
 
+## 1.16.3
+
+### Patch Changes
+
+- [#640](https://github.com/mengxi-ream/read-frog/pull/640) [`b092d13`](https://github.com/mengxi-ream/read-frog/commit/b092d13b6c43885895754d3a0dbaff14769bf7a1) Thanks [@0-o0](https://github.com/0-o0)! - feat(extension): done Firefox compatibility for Radix UI components
+
 ## 1.16.2
 
 ### Patch Changes
