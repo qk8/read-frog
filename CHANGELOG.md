@@ -1,5 +1,23 @@
 # @read-frog/extension
 
+## 1.29.0
+
+### Minor Changes
+
+- [#1105](https://github.com/mengxi-ream/read-frog/pull/1105) [`fa9ca52`](https://github.com/mengxi-ream/read-frog/commit/fa9ca52eb41f624726322221d47232c674a9036d) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - feat: refactor the selection popover and add pin support for selection toolbar popovers
+
+- [#1105](https://github.com/mengxi-ream/read-frog/pull/1105) [`fa9ca52`](https://github.com/mengxi-ream/read-frog/commit/fa9ca52eb41f624726322221d47232c674a9036d) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - feat: add a target language selector to the selection toolbar translation popover
+
+- [#1098](https://github.com/mengxi-ream/read-frog/pull/1098) [`0e2b1f6`](https://github.com/mengxi-ream/read-frog/commit/0e2b1f6b40913064052c0c9bbfc61fdfd3324d88) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - feat: translate browser tab title during page translation with automatic tracking and restoration
+
+### Patch Changes
+
+- [#1105](https://github.com/mengxi-ream/read-frog/pull/1105) [`fa9ca52`](https://github.com/mengxi-ream/read-frog/commit/fa9ca52eb41f624726322221d47232c674a9036d) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - fix: avoid re-fetching vocabulary, dictionary, and translation resources after page navigation (#1064)
+
+- [#1095](https://github.com/mengxi-ream/read-frog/pull/1095) [`14de454`](https://github.com/mengxi-ream/read-frog/commit/14de4540aab2b81fe8696af549ed89ef653840de) Thanks [@mengxi-ream](https://github.com/mengxi-ream)! - perf: optimize content script with sync config cache, lazy selection UI mounting, and proper teardown
+
+- [#1105](https://github.com/mengxi-ream/read-frog/pull/1105) [`fa9ca52`](https://github.com/mengxi-ream/read-frog/commit/fa9ca52eb41f624726322221d47232c674a9036d) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - refactor: simplify the selection toolbar translation flow and harden stale-request cancellation handling
+
 ## 1.28.1
 
 ### Patch Changes
