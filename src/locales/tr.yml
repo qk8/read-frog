@@ -987,6 +987,7 @@ action:
   saveToNotebasePendingLogin: Kaydetmeyi tamamlamak için giriş yapın
   saveToNotebasePendingLoginDescription: Giriş yaptıktan sonra Read Frog Notebase'i oluşturur ve bu sonucu otomatik olarak kaydeder.
   saveToNotebasePendingConnectedLoginDescription: Girişten sonra Read Frog mümkünse bağlı Notebase'e kaydeder. Bu hesap onu kullanamazsa yeni bir Notebase oluşturup kaydeder.
+  upgrade: Yükselt
   openCustomActions: Custom AI Actions'ı aç
   openNotebase: Notebase'i aç
   contextDetailsTitleLabel: Başlık

@@ -1102,6 +1102,7 @@ action:
   saveToNotebasePendingLogin: 登入後繼續儲存
   saveToNotebasePendingLoginDescription: 登入完成後，陪讀蛙會自動建立筆記庫並儲存目前結果。
   saveToNotebasePendingConnectedLoginDescription: 登入完成後，陪讀蛙會優先儲存到已連線的筆記庫；如果目前帳號無法使用它，會建立新的筆記庫並儲存目前結果。
+  upgrade: 升級
   openCustomActions: 開啟自訂 AI 指令
   openNotebase: 開啟筆記庫
   contextDetailsTitleLabel: 標題
