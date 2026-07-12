@@ -36,10 +36,12 @@ import { createSpinnerInside, getTranslatedTextAndRemoveSpinner } from "../ui/sp
 import { isNumericContent } from "../ui/translation-utils"
 import {
   attachBilingualTranslationWrapper,
+  collectSourceTextExcludingWrappers,
   getBilingualTranslationStateForSource,
   getVirtualParagraphGroupForSource,
   isBilingualTranslationStateCurrent,
   isVirtualParagraphGroupCurrent,
+  markExtensionDrivenNodeRemoval,
   markVirtualParagraphGroupInserted,
   originalContentMap,
   registerBilingualTranslationState,
@@ -219,12 +221,12 @@ async function translateVirtualParagraphs(
     wrappers: new Set(),
     splitRecords: [],
     sourceSnapshots,
-    sourceTextContent: layoutSource.textContent ?? "",
+    sourceTextContent: collectSourceTextExcludingWrappers(layoutSource),
     wrapperPlacements: new Map(),
   }
   registerVirtualParagraphGroup(group)
 
-  const sourceTextSnapshot = layoutSource.textContent
+  const sourceTextSnapshot = collectSourceTextExcludingWrappers(layoutSource)
   let includedUnits: VirtualParagraphUnit[]
   try {
     includedUnits = await filterVirtualParagraphUnits(units, config)
@@ -233,7 +235,10 @@ async function translateVirtualParagraphs(
     throw error
   }
 
-  if (!isVirtualParagraphGroupCurrent(group) || layoutSource.textContent !== sourceTextSnapshot) {
+  if (
+    !isVirtualParagraphGroupCurrent(group) ||
+    collectSourceTextExcludingWrappers(layoutSource) !== sourceTextSnapshot
+  ) {
     disposeVirtualParagraphGroup(group)
     return
   }
@@ -391,7 +396,9 @@ export async function translateNodesBilingualMode(
       return translateNodesBilingualMode(nodes, walkId, config, toggle, forceBlockTranslation)
     }
 
-    const sourceTextBeforeFilter = isHTMLElement(layoutSource) ? layoutSource.textContent : null
+    const sourceTextBeforeFilter = isHTMLElement(layoutSource)
+      ? collectSourceTextExcludingWrappers(layoutSource)
+      : null
     const textContent = transNodes
       .map((node) => extractTextContent(node, config))
       .join("")
@@ -696,6 +703,7 @@ export async function translateNodeTranslationOnlyMode(
       // Keep the wrapper when translation failed so the injected error UI remains visible.
       // Only remove the wrapper when translation returned an empty string.
       if (translatedText === "") {
+        markExtensionDrivenNodeRemoval(translatedWrapperNode)
         // Batch the remove operation to execute remove operation after insert operation
         batchDOMOperation(() => translatedWrapperNode.remove())
       }
