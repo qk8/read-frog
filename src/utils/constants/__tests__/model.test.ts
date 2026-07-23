@@ -62,6 +62,39 @@ describe("getProviderOptions", () => {
         thinkingLevel: "minimal",
         includeThoughts: false,
       })
+
+      const thinkingLevel35FlashLiteOptions = getProviderOptions("gemini-3.5-flash-lite", "google")
+      expect(thinkingLevel35FlashLiteOptions.google?.thinkingConfig).toMatchObject({
+        thinkingLevel: "minimal",
+        includeThoughts: false,
+      })
+
+      const thinkingLevel36FlashOptions = getProviderOptions("gemini-3.6-flash", "google")
+      expect(thinkingLevel36FlashOptions.google?.thinkingConfig).toMatchObject({
+        thinkingLevel: "minimal",
+        includeThoughts: false,
+      })
+
+      const thinkingLevelFlashLatestOptions = getProviderOptions("gemini-flash-latest", "google")
+      expect(thinkingLevelFlashLatestOptions.google?.thinkingConfig).toMatchObject({
+        thinkingLevel: "minimal",
+        includeThoughts: false,
+      })
+
+      const thinkingLevelFlashLiteLatestOptions = getProviderOptions(
+        "gemini-flash-lite-latest",
+        "google",
+      )
+      expect(thinkingLevelFlashLiteLatestOptions.google?.thinkingConfig).toMatchObject({
+        thinkingLevel: "minimal",
+        includeThoughts: false,
+      })
+
+      const thinkingLevelProLatestOptions = getProviderOptions("gemini-pro-latest", "google")
+      expect(thinkingLevelProLatestOptions.google?.thinkingConfig).toMatchObject({
+        thinkingLevel: "low",
+        includeThoughts: false,
+      })
     })
 
     it("should return options for claude models", () => {
