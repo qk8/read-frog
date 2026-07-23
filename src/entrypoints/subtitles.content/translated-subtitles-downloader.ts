@@ -35,11 +35,16 @@ export class TranslatedSubtitlesDownloader {
   private isDownloading = false
   private operationId = 0
   private successTimeout: ReturnType<typeof setTimeout> | null = null
+  private snapshotFetcher: SubtitlesFetcher | null = null
 
   constructor(
-    private fetcher: SubtitlesFetcher,
+    private getFetcher: () => SubtitlesFetcher,
     private config: PlatformConfig,
   ) {}
+
+  private get fetcher(): SubtitlesFetcher {
+    return this.snapshotFetcher ?? this.getFetcher()
+  }
 
   download = async (): Promise<void> => {
     if (this.isDownloading) {
@@ -48,6 +53,7 @@ export class TranslatedSubtitlesDownloader {
 
     this.clearSuccessTimeout()
     this.isDownloading = true
+    this.snapshotFetcher = this.getFetcher()
     const operationId = ++this.operationId
     const pageTitle = document.title || ""
     const videoId = this.config.getVideoId?.()
@@ -112,6 +118,7 @@ export class TranslatedSubtitlesDownloader {
     } finally {
       if (this.isActive(operationId)) {
         this.isDownloading = false
+        this.snapshotFetcher = null
       }
     }
   }
@@ -119,6 +126,7 @@ export class TranslatedSubtitlesDownloader {
   dispose(): void {
     this.operationId++
     this.isDownloading = false
+    this.snapshotFetcher = null
     this.clearSuccessTimeout()
     this.setStatus(TranslatedDownloadPhase.Idle, null)
   }
