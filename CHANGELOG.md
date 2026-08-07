@@ -1,5 +1,11 @@
 # @read-frog/extension
 
+## 1.45.2
+
+### Patch Changes
+
+- [#2032](https://github.com/mengxi-ream/read-frog/pull/2032) [`3559ee0`](https://github.com/mengxi-ream/read-frog/commit/3559ee0b992243ea325db4ea93ae290db71aa46e) Thanks [@frogGuaGuaGuaGua](https://github.com/frogGuaGuaGuaGua)! - fix(config): disable AI smart context by default
+
 ## 1.45.1
 
 ### Patch Changes
