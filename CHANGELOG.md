@@ -1,5 +1,11 @@
 # @read-frog/extension
 
+## 1.54.1
+
+### Patch Changes
+
+- [#2414](https://github.com/mengxi-ream/read-frog/pull/2414) [`a58d653`](https://github.com/mengxi-ream/read-frog/commit/a58d6539deb84b90046c456883f2dd0b617e33f8) Thanks [@mengxi-ream](https://github.com/mengxi-ream)! - fix(i18n): say Built-in AI works on every feature for Pro and Ultra, and on Custom AI Actions only for free accounts
+
 ## 1.54.0
 
 ### Minor Changes
