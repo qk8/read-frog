@@ -1,5 +1,13 @@
 # @read-frog/extension
 
+## 1.55.1
+
+### Patch Changes
+
+- [#2437](https://github.com/mengxi-ream/read-frog/pull/2437) [`5c53376`](https://github.com/mengxi-ream/read-frog/commit/5c5337624f148bd2c62d8d9496c9e5f06d7c7d8f) Thanks [@mengxi-ream](https://github.com/mengxi-ream)! - fix(providers): update Jalapeno Cloud offer to GLM 5.3 and CNY 1 credit
+
+- [#2434](https://github.com/mengxi-ream/read-frog/pull/2434) [`ab15bee`](https://github.com/mengxi-ream/read-frog/commit/ab15beef7fc6b57498b3047c6a4d394ddd2743eb) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - fix(custom-actions): keep custom layout CSS as written when nothing in it is unsafe, so a `var()` shorthand followed by one of its longhands, such as `text-decoration: underline wavy var(--c); text-decoration-thickness: 2px`, no longer gets dropped
+
 ## 1.55.0
 
 ### Minor Changes
