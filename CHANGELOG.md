@@ -1,5 +1,11 @@
 # @read-frog/extension
 
+## 1.58.2
+
+### Patch Changes
+
+- [#2479](https://github.com/mengxi-ream/read-frog/pull/2479) [`38e0091`](https://github.com/mengxi-ream/read-frog/commit/38e00917aa5c1b0646cbd0ab52a74394a2a4e67b) Thanks [@mengxi-ream](https://github.com/mengxi-ream)! - fix(content): make page translation, the selection toolbar and the floating button work again in Chrome 130 and 131, where they had not loaded since 1.52.1
+
 ## 1.58.1
 
 ### Patch Changes
