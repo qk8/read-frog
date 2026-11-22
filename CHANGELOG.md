@@ -1,5 +1,21 @@
 # @read-frog/extension
 
+## 1.61.2
+
+### Patch Changes
+
+- [#2561](https://github.com/mengxi-ream/read-frog/pull/2561) [`7f51190`](https://github.com/mengxi-ream/read-frog/commit/7f5119082a54ed199f987fac0d575cc48129557c) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - style(providers): show the colored Claude logo for the Anthropic provider and Claude models
+
+- [#2562](https://github.com/mengxi-ream/read-frog/pull/2562) [`b671615`](https://github.com/mengxi-ream/read-frog/commit/b6716150ad51ab77ffe80aa4a1f8a664bce12a8c) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - fix(context-menu): make the right-click actions on a selection work in the readfrog.app ebook reader
+
+- [#2536](https://github.com/mengxi-ream/read-frog/pull/2536) [`38ed1d0`](https://github.com/mengxi-ream/read-frog/commit/38ed1d0498ab7e0159b6841df51dfe051aa73599) Thanks [@taiiiyang](https://github.com/taiiiyang)! - fix(subtitles): keep the subtitles a reader picks before an embedded video first plays. With subtitles set to start automatically, the first play of an X or embedded YouTube video replaced AI subtitles asked for beforehand with the video's own captions and turned back on subtitles the reader had switched off
+
+- [#2565](https://github.com/mengxi-ream/read-frog/pull/2565) [`8f83fb6`](https://github.com/mengxi-ream/read-frog/commit/8f83fb6867ae844090b2efe83ab381d27444d8e4) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - feat(providers): add GPT-6.2, Fable 5.2 and Gemini 4 models and drop retired ones
+  
+  Add GPT-6.2 Sol and Astra, Claude Fable 5.2, Gemini 4 Carbon, Hydrogen and Neon, Nova 2 Lite and Fable 5.2 on Bedrock, GLM 5.3 on Mistral, and DeepSeek V4.1 Flash on OpenRouter, DeepInfra, Hugging Face, AtlasCloud and Alibaba, with thinking turned off like V4 Flash. Drop the models OpenAI, Anthropic, Google, Moonshot, Groq, Cerebras and Mistral have shut down, and move providers that used them to the recommended replacement. Moonshot now defaults to Kimi K3, because Kimi K2.6 is closed to new Kimi accounts. DeepSeek now defaults to `deepseek-flash`, which serves V4.1 Flash, and providers on the retired `deepseek-v4-flash` move to it.
+
+- [#2564](https://github.com/mengxi-ream/read-frog/pull/2564) [`c8f922c`](https://github.com/mengxi-ream/read-frog/commit/c8f922c5b26dc6c015f22c19cc7457109ffb1d15) Thanks [@ananaBMaster](https://github.com/ananaBMaster)! - fix(selection): keep page content added after Read Frog's UI in Cmd/Ctrl+A on Chrome
+
 ## 1.61.1
 
 ### Patch Changes
